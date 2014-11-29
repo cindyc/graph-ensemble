@@ -1,1 +1,4 @@
+yaml
 pytest==2.6.4
+bulbs>=0.3.29
+-e git://github.com/cindyc/bulbs.git@master#egg=bulbs
