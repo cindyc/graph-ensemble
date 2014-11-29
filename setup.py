@@ -18,14 +18,14 @@ requirements = open(
 
 setup(
     name='graphensemble', 
-    license='BSD',
+    license='',
     version=__version__,
     description='Assemble Structured Data from Graph Nodes',
     author='Cindy Cao',
     author_email='cindy@candidnarrative.com',
     url='http://github.com/cindyc/graphensemble',
-    packages=['graphensemble',],
     install_requires=requirements,
+    packages=['graphensemble',],
     classifiers=[
         'Environment :: Other Environment',
         'Intended Audience :: Developers',
