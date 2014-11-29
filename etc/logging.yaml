@@ -1,0 +1,29 @@
+version: 1 
+formatters: 
+  standard: 
+      format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  simple: 
+      format: '[%(levelname)s] %(name)s: %(message)s'
+      
+handlers:
+  console: 
+     class: logging.StreamHandler
+     level: DEBUG
+     formatter: standard
+     stream: ext://sys.stdout
+
+  file_handler: 
+     class: logging.handlers.RotatingFileHandler
+     level: DEBUG
+     formatter: simple
+     filename: graphensemble.log
+
+loggers: 
+    graphensemble: 
+        level: DEBUG
+        handlers: [console, file_handler]
+        propagate: no
+
+root: 
+    level: DEBUG
+    handlers: [console, file_handler]
