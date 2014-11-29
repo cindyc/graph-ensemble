@@ -49,13 +49,15 @@ org.neo4j.server.thirdparty_jaxrs_classes=com.thinkaurelius.neo4j.plugins=/tp
 cd $NEO4J_HOME
 bin/neo4j restart
 
+Install bulbs from my repo, it has the gremlin.groovy listed below fix:
+pip install -e git://github.com/cindyc/bulbs.git@master#egg=bulbs
 
-Note: to fix this error: 
 
 "ValueError: ({... "message": "groovy.lang.MissingMethodException: No signature of method: groovy.lang.MethodException.setMaxBufferSize() is applicable for argument types: ()" })
 "ValueError: ({... "message": "groovy.lang.MissingMethodException: No signature of method: groovy.lang.MethodException.StartTransaction() is applicable for argument types: ()" })
 
-Use the following workaround:
+Or fix the errors manually: 
+
 
 In [8]: g.scripts.source_file_map
 Out[8]: OrderedDict([('/Users/cindy.cao/.virtualenvs/modelgenie/lib/python2.7/site-packages/bulbs/gremlin.groovy', 'gremlin'), ('/Users/cindy.cao/.virtualenvs/modelgenie/lib/python2.7/site-packages/bulbs/neo4jserver/gremlin.groovy', 'gremlin')])
